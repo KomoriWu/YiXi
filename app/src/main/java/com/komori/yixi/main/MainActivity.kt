@@ -1,11 +1,10 @@
 package com.komori.yixi.main
 
-import android.widget.TextView
 import com.komori.yixi.R
-import com.komori.yixi.R.id.tv
 import com.komori.yixi.base.MvpBaseActivity
 import com.komori.yixi.main.mvp.MainContract
 import com.komori.yixi.main.mvp.MainPresenter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MvpBaseActivity<MainPresenter>(), MainContract.View {
     override val layoutId: Int
@@ -17,7 +16,7 @@ class MainActivity : MvpBaseActivity<MainPresenter>(), MainContract.View {
     }
 
     override fun init() {
-        findViewById<TextView>(tv).text = presenter?.toStr()
+       tv?.text = presenter?.toStr()
     }
 
     override fun showErrorMsg(msg: String) {

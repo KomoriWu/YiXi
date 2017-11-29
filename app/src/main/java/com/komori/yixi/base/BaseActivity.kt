@@ -5,15 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.KeyEvent
 import android.widget.Toast
-import butterknife.ButterKnife
 import com.komori.yixi.R
 import com.komori.yixi.application.MyApplication
+import kotlinx.android.synthetic.main.toolbar.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 
 
 abstract class BaseActivity : AppCompatActivity() {
-    var toolBar: Toolbar? = null;
     var isBack = true
     private var mExitTime: Long = 0
     private var mApplication: MyApplication? = null
@@ -42,13 +41,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
     fun initToolbar() {
-        toolBar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolBar)
+        setSupportActionBar(toolbar)
         title = ""
-        toolBar?.setOnMenuItemClickListener(onMenuItemClick)
+        toolbar?.setOnMenuItemClickListener(onMenuItemClick)
 
         if (isBack) {
-            toolBar?.setNavigationOnClickListener { onBackPressed() }
+            toolbar?.setNavigationOnClickListener { onBackPressed() }
         }
 
         if (!EventBus.getDefault().isRegistered(this)) {
@@ -92,6 +90,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     @Subscribe
-    fun onEventMainThread(flags: String) {
+    fun onEventMainThread() {
     }
 }

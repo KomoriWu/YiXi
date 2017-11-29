@@ -10,5 +10,4 @@ import javax.inject.Scope
  * on 2017/9/15.
  */
 @Scope
-@Retention(RetentionPolicy.RUNTIME)
 annotation class ActivityScope
