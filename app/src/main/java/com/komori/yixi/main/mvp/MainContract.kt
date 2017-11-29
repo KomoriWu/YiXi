@@ -11,10 +11,12 @@ import com.komori.yixi.base.BaseView
 
 
 interface MainContract {
-    interface View : BaseView
+    interface View : BaseView{
+        fun showStr(str:String)
+    }
 
     interface Presenter : BasePresenter<View> {
-        fun toStr(): String
+        fun toStr()
     }
 
 }

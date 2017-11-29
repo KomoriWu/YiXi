@@ -16,9 +16,14 @@ class MainActivity : MvpBaseActivity<MainPresenter>(), MainContract.View {
     }
 
     override fun init() {
-       tv?.text = presenter?.toStr()
+        presenter?.attachView(this);
+        presenter?.toStr()
     }
 
     override fun showErrorMsg(msg: String) {
+    }
+
+    override fun showStr(str: String) {
+        tv?.text = str
     }
 }

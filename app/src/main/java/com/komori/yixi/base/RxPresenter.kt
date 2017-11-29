@@ -10,7 +10,8 @@ import io.reactivex.disposables.Disposable
  * 基于Rx的Presenter封装,控制订阅的生命周期
  */
 
-open  class RxPresenter<T : BaseView> : BasePresenter<T> {
+open class RxPresenter<T : BaseView> : BasePresenter<T> {
+    @JvmField
     var view: T? = null
     private var mCompositeDisposable: CompositeDisposable? = null
 
