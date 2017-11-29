@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_app_bar"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48_y"
+        app:popupTheme="@style/ToolbarPopupTheme">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <com.komoriwu.one.widget.HpTextView
+                android:id="@+id/tv_hp_title"
+                style="@style/tv_title"
+                android:layout_above="@+id/tv_weather"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dp_23_x"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/tv_title"
+                android:layout_above="@+id/tv_weather"
+                android:textSize="@dimen/dp_16_x"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="1"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_weather"
+                style="@style/tv_title"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_3_y"
+                android:layout_marginTop="@dimen/dp_2_y"
+                android:textSize="@dimen/dp_10_x"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/line_bar"
+        style="@style/view_line"
+        android:layout_below="@+id/toolbar" />
+</RelativeLayout>
