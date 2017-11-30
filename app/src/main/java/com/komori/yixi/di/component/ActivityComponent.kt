@@ -16,6 +16,6 @@ import dagger.Component
 @ActivityScope
 @Component(dependencies = arrayOf(AppComponent::class), modules = arrayOf(ActivityModule::class))
 interface ActivityComponent {
-    val activity: Activity
+    fun getActivity(): Activity
     fun inject(mainActivity: MainActivity)
 }

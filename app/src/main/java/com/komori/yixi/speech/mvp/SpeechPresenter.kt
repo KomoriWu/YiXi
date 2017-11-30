@@ -8,11 +8,11 @@ import javax.inject.Inject
 
 /**
  * Created by KomoriWu
- * on 2017-11-29.
+ * on 2017-11-30.
  */
 
 
-class MainPresenter @Inject
+class SpeechPresenter @Inject
 constructor() : RxPresenter<SpeechContract.View>(), SpeechContract.Presenter {
 
     override fun toStr() {
