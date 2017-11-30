@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48_x"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20_x"
+        android:layout_marginRight="@dimen/dp_20_x"
+        android:src="@mipmap/find" />
+
+    <View
+        style="@style/view_line"
+        android:layout_width="@dimen/dp_1_x"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_8_y"
+        android:layout_marginTop="@dimen/dp_8_y" />
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/tab_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_20_x"
+        app:stl_customTabTextLayoutId="@layout/custom_tab"
+        app:stl_customTabTextViewId="@id/custom_text"
+        app:stl_dividerColor="@color/app_bar_color"
+        app:stl_indicatorColor="@color/app_bar_color"
+        app:stl_indicatorThickness="0dp"
+        app:stl_titleOffset="auto_center"
+        app:stl_underlineThickness="0dp" />
+</LinearLayout>

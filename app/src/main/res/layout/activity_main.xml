@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context="com.komori.yixi.main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
-        />
+    <include
+        android:id="@+id/tab_title"
+        layout="@layout/tab_title" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tv_hint"
+        android:layout_below="@id/tab_title" />
 
 </RelativeLayout>

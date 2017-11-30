@@ -11,6 +11,7 @@ import io.reactivex.disposables.Disposable
  */
 
 open class RxPresenter<T : BaseView> : BasePresenter<T> {
+
     @JvmField
     var view: T? = null
     private var mCompositeDisposable: CompositeDisposable? = null

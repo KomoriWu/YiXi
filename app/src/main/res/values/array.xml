@@ -1,0 +1,8 @@
+<resources>
+    <array name="tabs">
+        <item>讲演</item>
+        <item>枝桠</item>
+        <item>现场</item>
+        <item>记录</item>
+    </array>
+</resources>

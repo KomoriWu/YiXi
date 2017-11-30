@@ -32,7 +32,7 @@ abstract class MvpBaseActivity<T : BasePresenter<*>> : BaseActivity(), BaseView 
     override fun onCreateView() {
         super.onCreateView()
         setInject()
-//        presenter!!.attachView(this as Nothing)
+//        presenter?.attachView(this)
     }
 
     override fun onDestroy() {

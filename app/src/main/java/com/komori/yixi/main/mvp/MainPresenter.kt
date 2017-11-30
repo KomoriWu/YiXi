@@ -14,7 +14,6 @@ import javax.inject.Inject
 class MainPresenter @Inject
 constructor() : RxPresenter<MainContract.View>(), MainContract.Presenter {
 
-
     override fun toStr() {
         view!!.showStr("sssssssssssssss")
     }
