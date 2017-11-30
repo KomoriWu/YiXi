@@ -63,4 +63,5 @@
         parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textSize">@dimen/dp_20_x</item>
     </style>
+
 </resources>

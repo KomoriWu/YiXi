@@ -5,6 +5,7 @@ import com.komori.yixi.base.MvpBaseActivity
 import com.komori.yixi.speech.mvp.SpeechContract
 import com.komori.yixi.main.mvp.SpeechPresenter
 import com.komori.yixi.speech.SpeechFragment
+import com.komori.yixi.widget.ViewPageTransformer
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems
 import kotlinx.android.synthetic.main.activity_main.*
@@ -36,6 +37,8 @@ class MainActivity : MvpBaseActivity<SpeechPresenter>(), SpeechContract.View {
                 .add(listTabs[3], SpeechFragment::class.java)
                 .create())
         view_pager.adapter = adapter
+        //设置切换动画
+        view_pager.setPageTransformer(true, ViewPageTransformer())
         tab_view_pager.setViewPager(view_pager)
     }
 
