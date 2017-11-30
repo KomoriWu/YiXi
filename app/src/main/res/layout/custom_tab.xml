@@ -8,6 +8,4 @@
     android:paddingLeft="@dimen/dp_30_x"
     android:paddingRight="@dimen/dp_30_x"
     android:textColor="@color/custom_tab"
-    android:textSize="16sp">
-
-</com.komori.yixi.widget.HYTextView>
+    android:textSize="16sp"/>
