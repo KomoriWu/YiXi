@@ -1,4 +1,4 @@
-package com.komori.yixi.speech
+package com.komori.yixi.branches
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,14 +11,14 @@ import com.komori.yixi.site.mvp.RecordContract
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem
 import kotlinx.android.synthetic.main.fragment_branches.*
 
-class SpeechFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
+class BranchesFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
     override fun initInject() {
         getFragmentComponent().inject(this)
     }
 
     override fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
     Bundle?): View {
-        return inflater.inflate(R.layout.fragment_speech, container, false)
+        return inflater.inflate(R.layout.fragment_branches, container, false)
     }
 
     override fun init() {

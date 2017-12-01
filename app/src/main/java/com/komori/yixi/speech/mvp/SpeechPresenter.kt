@@ -2,7 +2,7 @@ package com.komori.yixi.main.mvp
 
 
 import com.komori.yixi.base.RxPresenter
-import com.komori.yixi.speech.mvp.SpeechContract
+import com.komori.yixi.site.mvp.RecordContract
 
 import javax.inject.Inject
 
@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 
 class SpeechPresenter @Inject
-constructor() : RxPresenter<SpeechContract.View>(), SpeechContract.Presenter {
+constructor() : RxPresenter<RecordContract.View>(), RecordContract.Presenter {
 
     override fun toStr() {
         view!!.showStr("sssssssssssssss")

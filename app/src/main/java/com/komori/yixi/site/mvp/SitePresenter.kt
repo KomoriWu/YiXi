@@ -8,11 +8,10 @@ import javax.inject.Inject
 
 /**
  * Created by KomoriWu
- * on 2017-11-29.
+ * on 2017-12-01.
  */
 
-
-class MainPresenter @Inject
+class SitePresenter @Inject
 constructor() : RxPresenter<RecordContract.View>(), RecordContract.Presenter {
 
     override fun toStr() {

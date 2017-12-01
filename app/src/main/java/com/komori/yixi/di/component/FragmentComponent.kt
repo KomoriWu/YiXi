@@ -1,10 +1,11 @@
 package com.komori.yixi.di.component
 
-import android.app.Activity
 
-
+import com.komori.yixi.branches.BranchesFragment
+import com.komori.yixi.site.SiteFragment
 import com.komori.yixi.di.module.FragmentModule
 import com.komori.yixi.di.scope.FragmentScope
+import com.komori.yixi.record.RecordFragment
 import com.komori.yixi.speech.SpeechFragment
 
 import dagger.Component
@@ -19,4 +20,7 @@ import dagger.Component
 interface FragmentComponent {
 //    fun getActivity(): Activity
     fun inject(speechFragment: SpeechFragment)
+    fun inject(branchesFragment: BranchesFragment)
+    fun inject(siteFragment: SiteFragment)
+    fun inject(recordFragment: RecordFragment)
 }
