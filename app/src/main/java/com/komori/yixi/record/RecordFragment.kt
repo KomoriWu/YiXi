@@ -18,13 +18,12 @@ class RecordFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
 
     override fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
     Bundle?): View {
-        return inflater.inflate(R.layout.fragment_site, container, false)
+        return inflater.inflate(R.layout.fragment_record, container, false)
     }
 
     override fun init() {
         presenter?.attachView(this);
         presenter?.toStr();
-//        item_title.text = "" + position
     }
 
     override fun showErrorMsg(msg: String) {
@@ -32,7 +31,5 @@ class RecordFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
     }
 
     override fun showStr(str: String) {
-        val position = FragmentPagerItem.getPosition(arguments)
-        item_title.text = str + position
     }
 }

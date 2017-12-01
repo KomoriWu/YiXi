@@ -24,7 +24,6 @@ class SpeechFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
     override fun init() {
         presenter?.attachView(this);
         presenter?.toStr();
-//        item_title.text = "" + position
     }
 
     override fun showErrorMsg(msg: String) {
@@ -32,7 +31,5 @@ class SpeechFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
     }
 
     override fun showStr(str: String) {
-        val position = FragmentPagerItem.getPosition(arguments)
-        item_title.text = str + position
     }
 }
