@@ -1,6 +1,7 @@
 package com.komori.yixi.speech
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +9,11 @@ import com.komori.yixi.R
 import com.komori.yixi.base.MvpBaseFragment
 import com.komori.yixi.record.mvp.RecordPresenter
 import com.komori.yixi.site.mvp.RecordContract
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem
-import kotlinx.android.synthetic.main.fragment_branches.*
+import kotlinx.android.synthetic.main.fragment_speech.*
 
 class SpeechFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
+    private var speechAdapter: SpeechAdapter? = null
+
     override fun initInject() {
         getFragmentComponent().inject(this)
     }
@@ -24,6 +26,9 @@ class SpeechFragment : MvpBaseFragment<RecordPresenter>(), RecordContract.View {
     override fun init() {
         presenter?.attachView(this);
         presenter?.toStr();
+        recycler_view.layoutManager = LinearLayoutManager(activity)
+        speechAdapter = SpeechAdapter(activity!!)
+        recycler_view.adapter = speechAdapter
     }
 
     override fun showErrorMsg(msg: String) {
