@@ -3,14 +3,18 @@ package com.komori.yixi.application
 import android.app.Activity
 import android.app.Application
 import android.content.Context
-
+import android.support.v7.app.AppCompatDelegate
+import com.komori.yixi.R
 import com.komori.yixi.di.component.AppComponent
 import com.komori.yixi.di.component.DaggerAppComponent
 import com.komori.yixi.di.module.AppModule
 import com.nostra13.universalimageloader.core.ImageLoader
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration
+import com.scwang.smartrefresh.layout.SmartRefreshLayout
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter
+import com.scwang.smartrefresh.layout.header.ClassicsHeader
+import java.util.*
 
-import java.util.ArrayList
 
 /**
  * Created by KomoriWu
@@ -26,6 +30,7 @@ class MyApplication : Application() {
             sInstance = this
         }
         mActivityList = ArrayList()
+        initSmartRefreshLayout()
     }
 
     fun addActivity(activity: Activity) {
@@ -77,6 +82,21 @@ class MyApplication : Application() {
             }
             return sAppComponent
         }
-    }
 
+        private fun initSmartRefreshLayout() {
+            AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
+            SmartRefreshLayout.setDefaultRefreshHeaderCreater { context, layout ->
+                layout.setPrimaryColorsId(android.R.color.white, R.color.tv_hint)
+                ClassicsHeader(context)
+            }
+
+            SmartRefreshLayout.setDefaultRefreshFooterCreater { context, layout ->
+                layout.setPrimaryColorsId(android.R.color.white, R.color.tv_hint)
+                ClassicsFooter(context)
+            }
+        }
+
+
+
+    }
 }
